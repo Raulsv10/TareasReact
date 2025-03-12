@@ -1,16 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Logo from "../assets/Logo.jpeg";
 import { CartWidget } from "./CartWidget";
 
-function navbar() {
+function Navbar() {
   return (
     <header>
       <nav className="navbar navbar-expand-md fixed-topnav bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="">
+          <Link className="navbar-brand" to="/">
             <img src={Logo} alt="Logo" width="45" height="40" />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -25,28 +26,57 @@ function navbar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="">
+                <Link className="nav-link" to="/productos">
                   Productos
-                </a>
+                </Link>
               </li>
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Categorias
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link
+                      className="nav-link dropdown-item"
+                      to="/productos/categoria/women's clothing"
+                    >
+                      Mujer
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="nav-link dropdown-item"
+                      to="/productos/categoria/men's clothing"
+                    >
+                      Hombre
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              {/* <li className="nav-item">
+                <Link className="nav-link" to="/nosotros">
+                  categoria
+                </Link>
+              </li> */}
               <li className="nav-item">
-                <a className="nav-link" href=".">
+                <Link className="nav-link" to="/Nosotros">
                   Nosotros
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="">
+                <Link className="nav-link" to="/carrito">
                   Carrito
-                </a>
+                  <CartWidget />
+                </Link>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="">
-                  Consulta tu pedido
-                </a>
-              </li>
-              <li>
-                <CartWidget />
-              </li>
+              {/* <li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -55,4 +85,4 @@ function navbar() {
   );
 }
 
-export default navbar;
+export default Navbar;
