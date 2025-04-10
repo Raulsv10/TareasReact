@@ -2,14 +2,14 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import NavBar from "./Components/Navbar.jsx";
+import NavBar from "./Components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ItemListContainer } from "./Components/ItemListContainer";
 import ElementoDetail from "./components/ElementoDetail";
 import ImportProducts from "./components/impor";
-import CarritoProvider from "./components/CartConext.jsx";
+import CarritoProvider from "./components/CartConext";
 import Carrito from "./components/Carrito";
 
 function App() {
