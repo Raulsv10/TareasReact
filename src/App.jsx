@@ -6,7 +6,7 @@ import NavBar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ItemListContainer } from "./Components/ItemListContainer";
+import { ItemListContainer } from "./components/ItemListContainer";
 import ElementoDetail from "./components/ElementoDetail";
 import ImportProducts from "./components/impor";
 import CarritoProvider from "./components/CartConext";
